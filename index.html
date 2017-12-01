@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Rental</title>
+</head>
+<body>
+    <h1>Business Name</h1>
+    <p id="xxxxx"></p>
+    
+    <form id="xxxxx">
+        <input type="text" id="name" value=""><br>
+        <!--  Dropdown to select car type.  -->
+        <select name="cars" id="cars" onchange="priceAvail ()">
+            <option id="choose" value="choose">Choose</option>
+            <option value="economy" id="economy">Economy</option>
+            <option value="midsize" id="midsize">Midsize</option>
+        </select>
+       <br>
+        
+        <input type="button" id="rentCar" onclick="rentValid ()" value="Rent this car">
+   </form>
+  
+        
+    <h2>Economy cars available</h2>
+    <p id="econ"></p>
+    <p id="economyPrice"></p>
+    <p id="economyType"></p>
+    
+    <h2>Midsize cars available</h2>
+    <p id="mid"></p>
+    <p id="midsizePrice"></p>
+    <p id="midsizeType"></p>
+    
+    
+   
+    
+<!--
+<button onClick="getCars()">Update availability</button> 
+
+<button onClick="rentEcon()">Rent out 1 Economy car</button> 
+
+<button onClick="rentMid()">Rent out 1 Midsize car</button>
+ -->
+    
+        <script src="index.js"> </script>
+   
+    
+</body>
+</html>
+            

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--  Car Rental - Complex Object Project Dynamic Selection Tag project  -->
+    <title>Car Rental</title>
+</head>
+<body>
+    <h1>Business Name</h1>
+    <p id="name"></p>
+    
+    <form id="xxxxx">
+        <input type="text" id="name" firstName="name" value="name"><br>
+   </form>
+   
+
+
+<!--  Dropdown to select car type.  -->
+        <select name="cars" id="cars" onchange="priceAvail ()">
+            <option id="choose" value="choose">Choose</option>
+            <option value="economy" id="economy">Economy</option>
+            <option value="midsize" id="midsize">Midsize</option>
+        </select>
+        </p>
+        
+    <h2>Economy cars available</h2>
+    <p id="econ"></p>
+    <p id="economyPrice"></p>
+    <p id="economyType"></p>
+    
+    <h2>Midsize cars available</h2>
+    <p id="mid"></p>
+    <p id="midsizePrice"></p>
+    <p id="midsizeType"></p>
+    
+    
+    <button id="rentCar">Rent this car</button>
+    
+<!--
+<button onClick="getCars()">Update availability</button> 
+
+<button onClick="rentEcon()">Rent out 1 Economy car</button> 
+
+<button onClick="rentMid()">Rent out 1 Midsize car</button>
+ -->
+    <script>
+        var car = {
+            bizName: 'Enterprise Car Rental',
+            economy: 90,
+            economyPrice: "$50",
+            economyType: "Pinto",
+            midsize: 180,
+            midsizePrice: "$75",
+            midsizeType: "Accord",
+        };
+        //function getCars() {
+            //document.getElementById("name").innerHTML = car.bizName;
+            //document.getElementById("econ").innerHTML = car.economy;
+            //document.getElementById("mid").innerHTML = car.midsize;
+            //};
+        //function rentEcon () {
+            //document.getElementById("econ").innerHTML = car.economy--;
+            //return car.economy;
+        // };
+        //function rentMid () {
+            //document.getElementById("mid").innerHTML = car.midsize--;
+            //return car.midsize;
+         //};
+         //onClick getCars();
+         
+         
+         
+         function priceAvail () {
+            var listCars = document.getElementById("cars").value;
+            if (listCars === "economy") {
+                document.getElementById("econ").innerHTML = car.economy;
+                document.getElementById("mid").innerHTML = "";
+                document.getElementById("economyPrice").innerHTML = car.economyPrice;
+                document.getElementById("midsizePrice").innerHTML = "";
+                document.getElementById("economyType").innerHTML = car.economyType;
+                document.getElementById("midsizeType").innerHTML = "";
+            } else if (listCars === "midsize") {
+                document.getElementById("mid").innerHTML = car.midsize;
+                document.getElementById("econ").innerHTML = "";
+                document.getElementById("midsizePrice").innerHTML = car.midsizePrice;
+                document.getElementById("economyPrice").innerHTML = "";
+                document.getElementById("midsizeType").innerHTML = car.midsizeType;
+                document.getElementById("economyType").innerHTML = "";
+            } else if (listCars === "choose") {
+                document.getElementById("econ").innerHTML = "";
+                document.getElementById("mid").innerHTML = "";
+                document.getElementById("midsizePrice").innerHTML = "";
+                document.getElementById("midsizeType").innerHTML = "";
+                document.getElementById("economyPrice").innerHTML = "";
+                document.getElementById("economyType").innerHTML = "";
+//look for a way to get choose to zero out all the values on one line of code
+
+
+    
+            }
+         };
+    </script>
+    
+</body>
+</html>
+            
